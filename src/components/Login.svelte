@@ -15,7 +15,7 @@
         <label for="password">Senha</label>
         <Input dark idInput="password" typeInput="password" placeholderInput="Senha" requiredInput/>
         <input type="submit" value="Entrar">
-       <!-- <Button dark btn value="Entrar" /> -->
+        <!-- <Button dark btn value="Entrar" /> -->
     </form>
 </section>
 

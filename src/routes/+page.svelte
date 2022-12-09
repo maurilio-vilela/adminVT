@@ -1,9 +1,15 @@
 <script lang="ts">
+    let user = { loggedIn: false };
 	import Login from "../components/Login.svelte";
 </script>
 
 <main>
+    {#if user.loggedIn}
+
+    {/if}
+    {#if !user.loggedIn}
     <Login />
+    {/if}
 </main>
 
 <style>
