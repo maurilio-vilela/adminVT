@@ -15,7 +15,7 @@
         <label for="password">Senha</label>
         <Input dark idInput="password" typeInput="password" placeholderInput="Senha" requiredInput/>
         <input type="submit" value="Entrar">
-        <!-- <Button dark btn value="Entrar" /> -->
+       <!-- <Button dark btn value="Entrar" /> -->
     </form>
 </section>
 
@@ -27,7 +27,7 @@
         align-items: center;
         background-color: #343A40;
         width: 220px;
-        height: 320px;
+        height: 300px;
         padding: 0px 20px 15px 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px #161616;
@@ -53,10 +53,10 @@
         font-weight: 300;
     }
     .login input[type= submit]{
-        margin: 0.25rem 0.125rem;
+        width: 80px;
         border: 0;
-        padding: 0.475rem 0.95rem;
-        border-radius: 0.375rem;
+        padding: 5px;
+        border-radius: 3px;
         align-self: flex-end;
         cursor: pointer;
         background-color: #212529;

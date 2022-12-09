@@ -1,19 +1,9 @@
 <script lang="ts">
-    let user = { loggedIn: false };
-
-    function toggle() {
-        user.loggedIn = !user.loggedIn;
-    }
 	import Login from "../components/Login.svelte";
 </script>
 
 <main>
-    {#if user.loggedIn}
-        
-    {/if}
-    {#if !user.loggedIn}
-        <Login />
-    {/if}
+    <Login />
 </main>
 
 <style>
