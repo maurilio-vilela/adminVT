@@ -1,5 +1,7 @@
 <script lang="ts">
-    
+	import Button from "./Button.svelte";
+    import Input from "./Input.svelte";
+
 </script>
 
 <section class="login">
@@ -9,10 +11,11 @@
     <h1>Login</h1>
     <form action="" method="post">
         <label for="username">Usuário</label>
-        <input id="username" type="text" placeholder="Nome de usuário" required>
+        <Input dark idInput="username" typeInput="text" placeholderInput="Nome de usuário" requiredInput/>
         <label for="password">Senha</label>
-        <input id="password" type="password" placeholder="Senha" required>
+        <Input dark idInput="password" typeInput="password" placeholderInput="Senha" requiredInput/>
         <input type="submit" value="Entrar">
+       <!-- <Button dark btn value="Entrar" /> -->
     </form>
 </section>
 
@@ -22,8 +25,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #161B22;
-        width: 200px;
+        background-color: #343A40;
+        width: 220px;
         height: 300px;
         padding: 0px 20px 15px 20px;
         border-radius: 10px;
@@ -49,15 +52,6 @@
         font-size: 0.92rem;
         font-weight: 300;
     }
-    .login input[type= text],
-    .login input[type= password]{
-        padding: 10px;
-        border: 0;
-        margin: 5px 0px 10px 0px;
-        border-radius: 3px;
-        background-color: #39424e;
-        color: #fff;
-    }
     .login input[type= submit]{
         width: 80px;
         border: 0;
@@ -65,11 +59,27 @@
         border-radius: 3px;
         align-self: flex-end;
         cursor: pointer;
-        background-color: #2c323a;
+        background-color: #212529;
+        border-color: #212529;
         color: #ffffff;
         font-weight: 700;
     }
     .login input[type= submit]:hover{
-        background-color: #3a414b;
+        background-color: #424649;
+        border-color: #373b3e;
+    }
+    .login input[type= submit]:focus{
+        box-shadow: rgb(66, 70, 73);
+    }
+    .login input[type= submit]:active{
+        color: #fff;
+        background-color: #4d5154;
+        border-color: #373b3e;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
+    .login input[type= submit]:disabled{
+        color: #fff;
+        background-color: #212529;
+        border-color: #212529;
     }
 </style>

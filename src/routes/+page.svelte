@@ -7,7 +7,7 @@
 </main>
 
 <style>
-    :global(body{ background-color: #0D1117; })
+    :global body{ background-color: #454D55; }
     main{
         display: flex;
         justify-content: center;
