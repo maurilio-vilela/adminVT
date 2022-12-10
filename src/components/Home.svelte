@@ -29,9 +29,10 @@ import NavHeader from "./NavHeader.svelte";
         padding: 0;
         width: 100%;
         height: 100vh;
-        background-image: url(../img/enterprise.jpg);
-        background-size: cover;
-        background-clip: border-box;
+        background-image: url(../img/enterprise.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
     }
     .nav-header{
         display: flex;
