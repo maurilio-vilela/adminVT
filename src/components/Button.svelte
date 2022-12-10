@@ -12,12 +12,12 @@
     export let dark: boolean = false;
 </script>
 
-<input  class:success class:primary 
+<button  class:success class:primary 
         class:secondary class:danger 
         class:warning class:info 
         class:light class:dark 
         class:btn
-        value={value} type={type}>
+        value={value} type={type} />
 
 <style>
     .btn{

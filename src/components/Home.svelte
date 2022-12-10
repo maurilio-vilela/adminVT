@@ -1,9 +1,10 @@
 <script lang="ts">
-	import NavHeader from "./NavHeader.svelte";
+	import MainSidebar from "./MainSidebar.svelte";
+import NavHeader from "./NavHeader.svelte";
 </script>
 
 <aside class="main-sidebar">
-    
+    <MainSidebar />
 </aside>
 <section class="content-wrapper">
     <nav class="nav-header">
@@ -14,7 +15,7 @@
 <style>
     .main-sidebar{
         margin: 0;
-        padding: 0;
+        padding: 0 8px;
         box-sizing: border-box;
         transition: margin-left .3s ease-in-out,width .3s ease-in-out;
         width: 250px;
@@ -28,7 +29,9 @@
         padding: 0;
         width: 100%;
         height: 100vh;
-        background-color: #454D55;
+        background-image: url(../img/enterprise.jpg);
+        background-size: cover;
+        background-clip: border-box;
     }
     .nav-header{
         display: flex;

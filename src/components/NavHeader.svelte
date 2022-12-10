@@ -13,22 +13,22 @@
 
 <ul class="nav-header-right">
     <li>
-        <a href="">
+        <a href="#search">
             <i class="fas fa-search"></i>
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="#comments">
             <i class="far fa-comments"></i>
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="#notifications">
             <i class="far fa-bell"></i>
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="#options">
             <i class="fas fa-th-large"></i>
         </a>
     </li>
@@ -48,7 +48,7 @@
     }
     .nav-header-left li a:hover,
     .nav-header-right li a:hover{
-        color: #c9c9c9;
+        color: #fdfdfd;
     }
     .nav-header-right{
         display: flex;

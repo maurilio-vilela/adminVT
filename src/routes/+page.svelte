@@ -14,7 +14,7 @@
 </main>
 
 <style>
-    :global body{ background-color: #454D55; margin:0; padding:0; }
+    :global body{ background-color: #454D55;color: #c2c7d0; font-size: 1rem; margin:0; padding:0; }
     main{
         display: flex;
         justify-content: center;
