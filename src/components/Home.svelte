@@ -1,14 +1,13 @@
 <script lang="ts">
-	import Button from "./Button.svelte";
-    import Input from "./Input.svelte";
-
+	import NavHeader from "./NavHeader.svelte";
 </script>
 
 <aside class="main-sidebar">
+    
 </aside>
 <section class="content-wrapper">
     <nav class="nav-header">
-
+        <NavHeader />
     </nav>
 </section> 
 
@@ -22,7 +21,7 @@
         height: 100vh;
         background-color: #343A40;
         box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)!important;
-        z-index: 1038;
+        z-index: 1;
     }
     .content-wrapper{
         margin: 0;
@@ -32,6 +31,9 @@
         background-color: #454D55;
     }
     .nav-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
         height: 56px;
         padding: 8px;

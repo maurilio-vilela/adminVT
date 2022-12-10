@@ -1,5 +1,5 @@
 <script lang="ts">
-    let user = { loggedIn: false };
+    let user = { loggedIn: true };
 	import Home from "../components/Home.svelte";
 	import Login from "../components/Login.svelte";
 </script>
