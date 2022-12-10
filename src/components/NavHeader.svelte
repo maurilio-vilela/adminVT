@@ -1,5 +1,5 @@
 <script lang="ts">
-	
+	import { page } from '$app/stores';
 </script>
 
 <ul class="nav-header-left">
@@ -8,6 +8,9 @@
     </li>
     <li>
         <a href="#contact">Contact</a>
+    </li>
+    <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+        <a href="/login">Login</a>
     </li>
 </ul>
 

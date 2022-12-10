@@ -1,14 +1,17 @@
 <script lang="ts">
+    import { page } from '$app/stores';
 	import Input from "./Input.svelte";
+    import logo from "../img/logo.svg";
+    import perfil from "../img/maurilio.jpg";
 </script>
 <div class="brand-link">
     <a href="./">
-        <img src="src/img/logo.svg" alt="Vilela Tech">
+        <img src={logo} alt="Vilela Tech">
     </a>
 </div>
 <div class="user-panel">
     <div class="image">
-        <img src="src/img/maurilio.jpg" alt="perfil">
+        <img src={perfil} alt="perfil">
     </div>
     <div class="info">
         <a href="/#profile-user">Maurílio Vilela</a>
@@ -19,31 +22,31 @@
 </div>
 <nav>
     <ul class="sidebar">
-        <li>
-            <a href="/#">
+        <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+            <a href="/dashboard">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 Dashboard
             </a>
         </li>
-        <li>
+        <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
             <a href="/#">
                 <i class="nav-icon fas fa-th"></i>
                 Widgets
             </a>
         </li>
-        <li>
+        <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
             <a href="/#">
                 <i class="nav-icon fas fa-copy"></i>
                 Layout Options
             </a>
         </li>
-        <li>
+        <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
             <a href="/#">
                 <i class="nav-icon fas fa-edit"></i>
                 Forms
             </a>
         </li>
-        <li>
+        <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
             <a href="/#">
                 <i class="nav-icon fas fa-table"></i>
                 Tables

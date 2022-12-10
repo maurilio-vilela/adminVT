@@ -1,7 +1,13 @@
 <script lang="ts">
 	import MainSidebar from "./MainSidebar.svelte";
-import NavHeader from "./NavHeader.svelte";
+    import NavHeader from "./NavHeader.svelte";
 </script>
+<svelte:head>
+	<title>AdminVT - Home</title>
+	<meta name="description" content="Página Inicial do painel de administração" />
+    <!-- Font Awesome -->
+    <link href='https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css' rel='stylesheet'>
+</svelte:head>
 
 <aside class="main-sidebar">
     <MainSidebar />
@@ -29,7 +35,7 @@ import NavHeader from "./NavHeader.svelte";
         padding: 0;
         width: 100%;
         height: 100vh;
-        background-image: url(../img/enterprise.gif);
+        background-image: url(../img/enterprise2.gif);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
