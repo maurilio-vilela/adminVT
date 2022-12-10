@@ -7,7 +7,7 @@
 	<title>AdminVT - Login</title>
 	<meta name="description" content="AdminVT - Login" />
 </svelte:head>
-
+<div class="login">
     <section class="login-container">
         <section class="logo">
             <img src="src/img/logo.svg" alt="logo">
@@ -22,12 +22,28 @@
             <!-- <Button dark btn value="Entrar" /> -->
         </form>
     </section>
-
+</div>
 <style>
+    :global body{
+        width: 100%;
+        background-color: #454D55;
+        color: #c2c7d0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+        font-size: 1rem; 
+        margin:0; 
+        padding:0; 
+        }
+	.login {
+		display: flex;
+		min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+	}
     .login-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         background-color: #343A40;
         width: 220px;
         height: 300px;

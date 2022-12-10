@@ -1,10 +1,10 @@
 <script lang="ts">
-	import MainSidebar from "./MainSidebar.svelte";
-    import NavHeader from "./NavHeader.svelte";
+	import MainSidebar from "../../components/MainSidebar.svelte";
+    import NavHeader from "../../components/NavHeader.svelte";
 </script>
 <svelte:head>
-	<title>AdminVT - Home</title>
-	<meta name="description" content="Página Inicial do painel de administração" />
+	<title>AdminVT - Dashboard</title>
+	<meta name="description" content="AdminVT - Dashboard" />
 </svelte:head>
 
 <aside class="main-sidebar">
@@ -15,7 +15,7 @@
         <NavHeader />
     </nav>
     <section class="content">
-        <h1>Seja bem vindo!</h1>
+        <slot></slot>
     </section>
 </section> 
 
@@ -36,10 +36,6 @@
         padding: 0;
         width: 100%;
         height: 100vh;
-        background-image: url(../img/enterprise2.gif);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
     }
     .content{
         display: flex;

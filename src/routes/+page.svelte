@@ -4,7 +4,7 @@
 	import Login from "./login/+page.svelte";
 </script>
 <svelte:head>
-	<title>AdminVT</title>
+	<title>AdminVT - Home</title>
 	<meta name="description" content="AdminVT - painel de administração" />
 </svelte:head>
 
