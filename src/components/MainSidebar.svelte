@@ -2,6 +2,7 @@
     import { page } from '$app/stores';
 	import Input from "./Input.svelte";
     import logo from "../img/logo.svg";
+    import Button from './Button.svelte';
     import perfil from "../img/maurilio.jpg";
 </script>
 <div class="brand-link">
@@ -19,11 +20,12 @@
 </div>
 <div class="sidebar-search">
     <Input dark idInput="" typeInput="search" placeholderInput="Search" />
+    <button><i class="fas fa-search"></i></button>
 </div>
 <nav>
     <ul class="sidebar">
         <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-            <a href="/dashboard">
+            <a href="dashboard">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 Dashboard
             </a>
