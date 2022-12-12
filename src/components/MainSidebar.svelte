@@ -1,8 +1,8 @@
 <script lang="ts">
     import { page } from '$app/stores';
-	import Input from "./Input.svelte";
+
     import logo from "../img/logo.svg";
-    import Button from './Button.svelte';
+    import {Button, Input, InputGroup} from 'sveltestrap';
     import perfil from "../img/maurilio.jpg";
 </script>
 <div class="brand-link">
@@ -19,8 +19,10 @@
     </div>
 </div>
 <div class="sidebar-search">
-    <Input dark idInput="" typeInput="search" placeholderInput="Search" />
-    <button><i class="fas fa-search"></i></button>
+    <InputGroup>
+        <Input type="search" placeholder="Search" />
+        <Button ><i class="fas fa-search"></i></Button>
+    </InputGroup>
 </div>
 <nav>
     <ul class="sidebar">
@@ -62,7 +64,8 @@
         display: flex;
         flex-wrap: wrap;
         padding: 0;
-        margin: 0;
+        margin: 10px 0px 0px 0px;
+
     }
     .sidebar li {
         padding: 0.1rem 0;
