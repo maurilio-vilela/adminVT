@@ -1,5 +1,5 @@
 <script lang="ts">
-
+	
 </script>
 
 <div class="app">
@@ -13,7 +13,7 @@
 </div>
 
 <style>
-    :global body{
+    :global(body){
         width: 100%;
         background-color: #454D55;
         color: #c2c7d0;
@@ -22,6 +22,10 @@
         margin:0; 
         padding:0; 
         }
+	:global(a){
+		color:#c2c7d0;
+		text-decoration: none;
+	}
 	.app {
 		display: flex;
 		min-height: 100vh;

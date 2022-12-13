@@ -1,7 +1,8 @@
 <script lang="ts">
+
 </script>
 
-<h1>Dashboard</h1>
+<h3>Dashboard</h3>
 
 <style>
     

@@ -8,12 +8,7 @@
 	<meta name="description" content="AdminVT - painel de administração" />
 </svelte:head>
 
-    {#if user.loggedIn}
-    <Home />
-    {/if}
-    {#if !user.loggedIn}
-    <Login />
-    {/if}
+    <Login title="Login"/>
 
 <style>
     /*main{

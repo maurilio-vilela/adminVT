@@ -1,8 +1,6 @@
 <script lang="ts">
     import { page } from '$app/stores';
-
     import logo from "../img/logo.svg";
-    import {Button, Input, InputGroup} from 'sveltestrap';
     import perfil from "../img/maurilio.jpg";
 </script>
 <div class="brand-link">
@@ -18,11 +16,9 @@
         <a href="/#profile-user">Maurílio Vilela</a>
     </div>
 </div>
-<div class="sidebar-search">
-    <InputGroup>
-        <Input type="search" placeholder="Search" />
-        <Button ><i class="fas fa-search"></i></Button>
-    </InputGroup>
+<div class="sidebar-search input-group">
+    <input type="search" class="form-control" placeholder="Search" />
+    <button class="btn btn-secondary"><i class="fas fa-search"></i></button>
 </div>
 <nav>
     <ul class="sidebar">
@@ -33,10 +29,21 @@
             </a>
         </li>
         <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-            <a href="/#">
-                <i class="nav-icon fas fa-th"></i>
-                Widgets
+            <a href="reservation" data-bs-toggle="collapseReservation">
+                <i class="fa fa-ticket" aria-hidden="true"></i>
+                Reservas
             </a>
+            <div class="collapse" id="collapseReservation">
+                <ul>
+                    <li>
+                        <a href="reservation/add">
+                            <i class="fa-solid fa-square-plus"></i>
+                            Add reserva
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
         </li>
         <li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
             <a href="/#">
