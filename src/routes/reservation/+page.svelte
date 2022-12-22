@@ -1,13 +1,35 @@
 <script >
 	import { onMount } from "svelte";
+   
     import supabase from "$lib/db";
-    let reservations = [];
+    let loading = false
+    let reservations = {}
 
-    onMount(async() => {
-        let { data, error } = await supabase.from('reservation').select('*')
-        reservations = data;
-        console.table(reservations);
-    })
+    console.log(typeof reservations)
+
+    onMount(() => {
+    	getReservation()
+	})
+    const getReservation = async () => {
+		loading = true
+		const { data: reservation, error } = await supabase
+		.from('reservation')
+		.select('*')
+        .eq('operadora', 'GEKOS')
+		if (reservation){
+            reservations = {
+                date: reservation.date,
+                operadora: reservation.operadora,
+                name_pax: reservation.name_pax,
+                origin: reservation.origin,
+                destiny: reservation.destiny
+            }
+            console.log(reservation.name_pax, reservation.origin, reservation.destiny)
+        }else{
+            console.log(error)
+        }
+
+    }
 
     let count = 0;
     function counter(){
@@ -17,6 +39,7 @@
         return count = 0;
     }
     function edit(){
+        // @ts-ignore
         return count = parseInt(document.getElementById('editCount')?.value)
     }
     let open = false;
@@ -42,13 +65,13 @@
             </tr>
         </thead>
         <tbody>
-            {#each reservations as reservation}
+            
             <tr>
-                <td class="col-1">{reservation.data}</td>
-                <td class="col-2">{reservation.operadora}</td>
-                <td class="col-3">{reservation.name_pax}</td>
-                <td class="col-2">{reservation.origin}</td>
-                <td class="col-2">{reservation.destiny}</td>
+                <td class="col-1">{reservations.name}</td>
+                <td class="col-2">{reservations.operadora}</td>
+                <td class="col-3">{reservations.name_pax}</td>
+                <td class="col-2">{reservations.origin}</td>
+                <td class="col-2">{reservations.destiny}</td>
                 <td class="col-2">
                     <button class="btn btn-outline-primary" on:click={edit}>
                         <i class="fa-solid fa-pen-to-square"></i>
@@ -58,9 +81,7 @@
                     </button>
                 </td>
             </tr>
-            {:else}
-                <th>Erro ao retornar dados</th>
-            {/each}
+           
             <tr>
                 <td class="col-1">
                     <button class="btn btn-primary" on:click={counter}>Clique</button>
