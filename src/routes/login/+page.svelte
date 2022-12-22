@@ -5,10 +5,21 @@
     export let title = "";
     let email = "";
     let password = "";
+    let dados = [];
 
-    export async function handleLogin(){
+    async function handleLogin(){
         if (title === "Login") {
         const { data, error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password,
+        });
+        if (data) {
+            goto("/reservation");
+        } else {
+            console.log(error);
+        }
+        } else {
+        const { data, error } = await supabase.auth.signUp({
             email: email,
             password: password,
         });
@@ -17,7 +28,7 @@
         } else {
             console.log(error);
         }
-        } 
+        }
     }
 </script>
 <svelte:head>
